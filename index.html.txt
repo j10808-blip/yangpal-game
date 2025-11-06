@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title> 양팔저울 게임</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1> 양팔저울 게임</h1>
+
+  <div id="game-container">
+    <div id="scale">
+      <div id="left-pan">왼쪽: 0</div>
+      <div id="beam"></div>
+      <div id="right-pan">오른쪽: 0</div>
+    </div>
+
+    <div id="player-info">
+      <p id="player">PLAYER1 차례</p>
+      <p id="inventory"></p>
+    </div>
+
+    <div id="buttons">
+      <button class="mineral red" onclick="playTurn('빨')">빨</button>
+      <button class="mineral yellow" onclick="playTurn('노')">노</button>
+      <button class="mineral green" onclick="playTurn('초')">초</button>
+      <button class="mineral blue" onclick="playTurn('파')">파</button>
+      <button class="mineral purple" onclick="playTurn('보')">보</button>
+      <button class="skip" onclick="playTurn('안올림')">안올림</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <audio id="balance-sound" src="https://cdn.pixabay.com/download/audio/2023/03/09/audio_8d2d5e4a9b.mp3?filename=click-124467.mp3"></audio>
+  <audio id="success-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f4574f38d.mp3?filename=correct-2-46134.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
